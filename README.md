@@ -11,3 +11,4 @@ The project focus on the technology sector of the stock market. I randomly choos
 ## Data Exploration
 After getting rid of all unrelated words and punctuations, I build a corpus for companies in the same industry. Then I used word clouds to visualize the data, and tried to find
 the words with the largest frequencies. Moreover, since I’ve already labeled the reports, I plotted two word clouds. The first contains the words appearing in the reports that lead to a decrease stock performance, and the second is from the other class.
+![Drop wordcloud]https://github.com/Minghaoy97/Text-analysis-of-financial-reports-by-Natural-Language-Processing/blob/main/images/wordcloud_drop.png
