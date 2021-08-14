@@ -1,6 +1,7 @@
 # <div align='center' >SI630 Natural Language Processing Final Project </div><div align='center' > Text analysis of financial reports by Natural Language Processing </div>
 
 > Author: Minghao Yang minghaoy@umich.edu
+
 > To see the blog post, click [here](https://minghaoy.medium.com/nlp-on-financial-reports-18805bd65fc3)
 
 ## Project Goal
