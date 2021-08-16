@@ -18,5 +18,13 @@ the words with the largest frequencies. Moreover, since I’ve already labeled t
 
 Furthermore, I used topic selection model LDA to further investigate the data. The main reason to use this model is to find if there are some unique topics for reports with good or bad stock performance. The following plot shows the topics for reports with bad stock performance.
 <p align="center">
-  <img src="./images/lda_drop.png" width="900" title="Word cloud for stocks with negative price move">
+  <img src="./images/lda_drop.png" width="900" title="LDA on bad performance financial report">
 </p>
+
+## Fitting Models
+Firstly I retrained the GPT2 to do the sentimental classification better based on a huge pre-trained corpus and fine-tuned model. I managed to divide the report into small sentence and predict if each sentence is positive or negtive. Then I determined the class of the whole report by comparing between the total numbers of the positive sentenses and the negative sentenses. The GPT2 model worked here after I transformed sentences into ”sentence +(special char) + Postive/Negative” form, and train the model to generate the following word after the special char. Then I tried Naive Bayesian model and Logistic Regression model to make simple classification. And compared between them to see they works and if the classification is effective. For naive bayesian model, the features are frequencies of each word, and in logistic regression model, I use onehot encoding method to
+transform texts into vectors. And the training set and the test set are all set as 9:1 for above models.
+
+# Evaluating
+
+# Conclusion
