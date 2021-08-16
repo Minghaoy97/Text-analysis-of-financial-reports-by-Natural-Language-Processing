@@ -16,8 +16,7 @@ the words with the largest frequencies. Moreover, since I’ve already labeled t
   <img src="./images/wordcloud_raise.png" width="350" alt="Word cloud for stocks with positive price move">
 </p>
 
-Furthermore, I used topic selection model LDA to further investigate the data. The main reason to use this model is to find if there are some unique topics for reports with good or bad stock performance. The result is as following. The first plot is the topics for reports with bad stock performance, and the second shows the other class.
+Furthermore, I used topic selection model LDA to further investigate the data. The main reason to use this model is to find if there are some unique topics for reports with good or bad stock performance. The following plot shows the topics for reports with bad stock performance.
 <p align="center">
-  <img src="./images/lda_drop.png" width="800" title="Word cloud for stocks with negative price move">
-  <img src="./images/lda_raise.png" width="800" alt="Word cloud for stocks with positive price move">
+  <img src="./images/lda_drop.png" width="900" title="Word cloud for stocks with negative price move">
 </p>
