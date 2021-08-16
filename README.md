@@ -43,6 +43,10 @@ I calculated the F-1 scores to compare the effectiveness of different models
 | --- | --- | --- | --- | --- |
 | F-1 Scores of the test sets |  0.94  |  0.63  |  0.78  |  0.97  | 
 
+As for GPT2 model, I tried to perform ”sentiment” analysis on sentences in each report. Ideally, the results can be only ”positive” or ”negative”. However, there are a great numbers of sentences return something not useful, and it may significantly reduce the accuracy of this method. From my opinion I think this comes from the length of each sentences. According to this issue, after getting rid of those results, I calculate the F-1 score of this method, which is 0.6312.
+
+The result is not satisfying enough, and because of the drop of great numbers of sentences, the result is also not trustworthy. Therefore I then worked on directly classify the whole reports. I built a naive bayesian and a logistic regression model to predict the class of the entire document, and used F-1 score to compare between their effectiveness. With the naive Bayesian method, the F-1 score of the test set is 0.7826, while the F-1 score for the logistic regression model is 0.9655. The later one is surprisingly high, which is even higher than the result from the baseline method.
+
 # Conclusion
 
 In order to analyze the textual part of the financial reports, I organized my own data set with 10-K reports of 52 companies in tech industry, and transformed them into machine readable text with labels. Then I use topic model LDA and try to summarize the top salient words for each class, but the information achieved from that model looks not so valuable. Then I decide to do the classification by firstly using GPT-2 to predict the ”sentiment” response for each sentence, then use Naive Bayesian and Logistic regression model to predict from the whole document. It turns out that predicting based on the whole document is more effective and trustworthy.
