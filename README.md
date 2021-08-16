@@ -44,3 +44,5 @@ I calculated the F-1 scores to compare the effectiveness of different models
 | F-1 Scores of the test sets |  0.94  |  0.63  |  0.78  |  0.97  | 
 
 # Conclusion
+
+In order to analyze the textual part of the financial reports, I organized my own data set with 10-K reports of 52 companies in tech industry, and transformed them into machine readable text with labels. Then I use topic model LDA and try to summarize the top salient words for each class, but the information achieved from that model looks not so valuable. Then I decide to do the classification by firstly using GPT-2 to predict the ”sentiment” response for each sentence, then use Naive Bayesian and Logistic regression model to predict from the whole document. It turns out that predicting based on the whole document is more effective and trustworthy.
