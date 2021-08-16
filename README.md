@@ -25,21 +25,22 @@ Furthermore, I used topic selection model LDA to further investigate the data. T
 Firstly I retrained the GPT2 to do the sentimental classification better based on a huge pre-trained corpus and fine-tuned model. I managed to divide the report into small sentence and predict if each sentence is positive or negtive. Then I determined the class of the whole report by comparing between the total numbers of the positive sentenses and the negative sentenses. The GPT2 model worked here after I transformed sentences into ”sentence +(special char) + Postive/Negative” form, and train the model to generate the following word after the special char. 
 
 <p align="center">
-  <img src="./images/loss_gpt2.png" width="900" title="Loss curve for GPT2 model">
+  <img src="./images/loss_gpt2.png" width="600" title="Loss curve for GPT2 model">
 </p>
 
 Then I tried Naive Bayesian model and Logistic Regression model to make simple classification. And compared between them to see they works and if the classification is effective. For naive bayesian model, the features are frequencies of each word, and in logistic regression model, I use onehot encoding method to
 transform texts into vectors. And the training set and the test set are all set as 9:1 for above models.
 
 <p align="center">
-  <img src="./images/loss_logit.png" width="900" title="Negative Loss curve for logit model">
+  <img src="./images/loss_logit.png" width="600" title="Negative Loss curve for logit model">
 </p>
 
 # Evaluating
 
 I calculated the F-1 scores to compare the effectiveness of different models
 
-|                             | Baseline accounting analysis | GPT-2 model | Naive Bayesian | Logistic Regression |
+|     | Baseline accounting analysis | GPT-2 model | Naive Bayesian | Logistic Regression |
+| --- | --- | --- | --- | --- |
 | F-1 Scores of the test sets |  0.94  |  0.63  |  0.78  |  0.97  | 
 
 # Conclusion
